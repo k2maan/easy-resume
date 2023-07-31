@@ -1,0 +1,132 @@
+* {
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #333;
+}
+
+.main {
+	margin: auto;
+	background-color: #fff;
+	width: 900px;
+	box-sizing: border-box;
+	padding: 16px 24px;
+}
+
+input,
+textarea {
+	border: 0px;
+	border-radius: 8px;
+	padding: 4px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+	background-color: #eee;
+	outline: none;
+}
+
+input[name="name"] {
+	text-decoration: none;
+	padding: 16px 4px;
+	font-size: 36px;
+	text-align: center;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.button-add, .button-remove {
+	margin: 0;
+	position: absolute;
+	left: -36px;
+}
+
+h3 {
+	padding: 0;
+	margin: 0;
+	margin: 10px 0 8px 0;
+}
+
+.info {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.info-item {
+	padding: 4px 4px;
+	text-decoration: none;
+	text-align: center;
+	width: auto;
+}
+
+input[name="position"],
+input[name="project-title"],
+input[name="degree"] {
+	font-size: 16px;
+}
+
+.employer-details,
+.education-details,
+.project-details {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[name="employer-duration"],
+input[name="education-duration"] {
+	text-align: right;
+	width: 300px;
+}
+
+input[name="project-technologies"],
+input[name="education-place"] {
+	width: 50%;
+	text-align: right;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+}
+
+.education {
+	font-size: 16px;
+}
+
+.bullet-point {
+	position: absolute;
+	left: 5px;
+	top: 3px;
+}
+
+.details {
+	position: relative;
+	padding-left: 14px;
+}
+
+.details-button {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.button-add-details {
+	font-size: 10px;
+	margin: 0;
+	position: absolute;
+	left: -40px;
+}
+
+.button-remove-details {
+	font-size: 10px;
+	margin: 0;
+	position: absolute;
+	left: -20px;
+}
