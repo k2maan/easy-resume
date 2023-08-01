@@ -64,7 +64,7 @@ export default function Education() {
 								placeholder='School/College'
 							/>
 							<input type="text"
-								onChange={(event) => handleFieldChange(event, index, 'educationPLace')}
+								onChange={(event) => handleFieldChange(event, index, 'educationPlace')}
 								value={entry.educationPlace}
 								name="education-place"
 								id="education-place"

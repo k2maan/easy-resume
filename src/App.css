@@ -1,17 +1,46 @@
-* {
-	font-family: sans-serif;
-}
-
 body {
 	background-color: #333;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+textarea,
+select {
+	font-family: inherit;
 }
 
 .main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 120px;
+}
+
+.container {
 	margin: auto;
-	background-color: #fff;
 	width: 900px;
+	background-color: #fff;
 	box-sizing: border-box;
 	padding: 16px 24px;
+}
+
+.document {
+	height: 1100px;
+}
+
+.customiser {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+	width: 780px;
+	padding: 30px;
+	border-radius: 32px;
+	background-color: #444;
+	top: 20px;
+	position: fixed;
+	z-index: 100;
+	overflow: hidden;
 }
 
 input,
@@ -34,6 +63,7 @@ input[name="name"] {
 	padding: 16px 4px;
 	font-size: 36px;
 	text-align: center;
+	color: black;
 }
 
 .heading {
@@ -42,7 +72,8 @@ input[name="name"] {
 	position: relative;
 }
 
-.button-add, .button-remove {
+.button-add,
+.button-remove {
 	margin: 0;
 	position: absolute;
 	left: -36px;
@@ -52,6 +83,8 @@ h3 {
 	padding: 0;
 	margin: 0;
 	margin: 10px 0 8px 0;
+	border-bottom: 1.5px solid black;
+	width: 100%;
 }
 
 .info {
@@ -60,10 +93,20 @@ h3 {
 }
 
 .info-item {
+	font-size: 13px;
 	padding: 4px 4px;
 	text-decoration: none;
 	text-align: center;
 	width: auto;
+}
+
+a.info-item {
+	text-decoration: underline;
+	color: #555;
+}
+
+select[name="font"] {
+	padding: 4px;
 }
 
 input[name="position"],
@@ -129,4 +172,11 @@ textarea {
 	margin: 0;
 	position: absolute;
 	left: -20px;
+}
+
+/* To remove header and footer text/meta data from the PDF */
+@media print {
+	@page {
+		margin: 0;
+	}
 }
