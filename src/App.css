@@ -32,7 +32,8 @@ select {
 .customiser {
 	display: flex;
 	justify-content: center;
-	gap: 4px;
+	align-items: center;
+	gap: 8px;
 	width: 780px;
 	padding: 30px;
 	border-radius: 32px;
@@ -40,7 +41,7 @@ select {
 	top: 20px;
 	position: fixed;
 	z-index: 100;
-	overflow: hidden;
+	overflow: visible
 }
 
 input,
@@ -70,6 +71,32 @@ input[name="name"] {
 	display: flex;
 	align-items: center;
 	position: relative;
+}
+
+.button-add,
+.button-remove,
+.button-add-details,
+.button-remove-details {
+	z-index: 100;
+	border-radius: 25%;
+	border: 1px solid #666;
+	padding: 4px 8px;
+	background-color: #eee;
+	color: #000;
+	cursor: pointer;
+}
+
+.button-add:hover,
+.button-remove:hover,
+.button-add-details:hover,
+.button-remove-details:hover {
+	z-index: 100;
+	border-radius: 25%;
+	border: 1px solid #666;
+	padding: 4px 8px;
+	background-color: #e1f6fd;
+	color: #000;
+	cursor: pointer;
 }
 
 .button-add,
@@ -164,14 +191,14 @@ textarea {
 	font-size: 10px;
 	margin: 0;
 	position: absolute;
-	left: -40px;
+	left: -36px;
 }
 
 .button-remove-details {
 	font-size: 10px;
 	margin: 0;
 	position: absolute;
-	left: -20px;
+	left: -16px;
 }
 
 /* To remove header and footer text/meta data from the PDF */
@@ -179,4 +206,77 @@ textarea {
 	@page {
 		margin: 0;
 	}
+}
+
+
+
+.button-colour {
+	display: inline-block;
+	padding: 20px 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 2px;
+}
+
+.button-colour.black {
+	background-color: #000;
+}
+
+.button-colour.blue {
+	background-color: #353387;
+}
+
+.button-colour.cyan {
+	background-color: #22adb5;
+}
+
+.button-colour.grey {
+	background-color: #555;
+}
+
+.button-download {
+	padding: 2px 12px;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	color: #222;
+	border-radius: 4px;
+	border: 0px;
+	cursor: pointer;
+}
+
+.arrow {
+	border: solid #222;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 6px;
+	margin: 6px 12px 12px 6px;
+}
+
+.arrow:hover {
+	border: solid lightskyblue;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 6px;
+	margin: 6px 12px 12px 6px;
+}
+
+.right {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+.left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+}
+
+.down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }

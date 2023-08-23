@@ -1,18 +1,26 @@
 import '../App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Header(props) {
 	const [entry, setEntry] = useState({
 		name: '',
 		email: '',
+		location: '',
 		phone: '',
-		linkedin: '',
-		github: '',
-		website: '',
-		other: '',
 	})
 	const [isInputActive, setIsInputActive] = useState(false)
 	const [activeField, setActiveField] = useState('')
+
+	useEffect(() => {
+		const previousEntry = JSON.parse(JSON.stringify({
+			name: '',
+			email: '',
+			location: '',
+			phone: '',
+		}))
+		props.linkOptions.forEach((option) => previousEntry[option.value] = '')
+		setEntry(previousEntry)
+	}, [props.linkOptions])
 
 	const handleFieldChange = (event, field) => {
 		const previousEntry = JSON.parse(JSON.stringify(entry))
@@ -51,7 +59,17 @@ export default function Header(props) {
 					id="phone"
 					placeholder='phone'
 				/>
+				<input
+					className='info-item'
+					value={entry.location}
+					onChange={(event) => handleFieldChange(event, 'location')}
+					type="text"
+					name="location"
+					id="location"
+					placeholder='location'
+				/>
 				{
+					entry.hasOwnProperty('linkedin') &&
 					isInputActive &&
 					<input
 						autoFocus={activeField == 'linkedin'}
@@ -66,6 +84,7 @@ export default function Header(props) {
 					/>
 				}
 				{
+					entry.hasOwnProperty('linkedin') &&
 					!isInputActive &&
 					<a
 						style={{ textDecoration: !entry.linkedin && 'none' }}
@@ -77,6 +96,7 @@ export default function Header(props) {
 					</a>
 				}
 				{
+					entry.hasOwnProperty('github') &&
 					isInputActive &&
 					<input
 						autoFocus={activeField == 'github'}
@@ -91,6 +111,7 @@ export default function Header(props) {
 					/>
 				}
 				{
+					entry.hasOwnProperty('github') &&
 					!isInputActive &&
 					<a
 						style={{ textDecoration: !entry.github && 'none' }}
@@ -102,31 +123,7 @@ export default function Header(props) {
 					</a>
 				}
 				{
-					isInputActive &&
-					<input
-						autoFocus={activeField == 'website'}
-						onBlur={() => setIsInputActive(false)}
-						className='info-item'
-						value={entry.website}
-						onChange={(event) => handleFieldChange(event, 'website')}
-						type="text"
-						name="website"
-						id="website"
-						placeholder='website/blog'
-					/>
-				}
-				{
-					!isInputActive &&
-					<a
-						style={{ textDecoration: !entry.website && 'none' }}
-						className='info-item'
-						onClick={(event) => { event.preventDefault(); setActiveField('website'); setIsInputActive(true) }}
-						href={`${entry.website}`}
-					>
-						{entry.website ? entry.website : 'website/blog'}
-					</a>
-				}
-				{
+					entry.hasOwnProperty('other') &&
 					isInputActive &&
 					<input
 						autoFocus={activeField == 'other'}
@@ -137,10 +134,11 @@ export default function Header(props) {
 						type="text"
 						name="other"
 						id="other"
-						placeholder='other/leetcode/codeforces'
+						placeholder='other'
 					/>
 				}
 				{
+					entry.hasOwnProperty('other') &&
 					!isInputActive &&
 					<a
 						style={{ textDecoration: !entry.other && 'none' }}
@@ -148,7 +146,7 @@ export default function Header(props) {
 						onClick={(event) => { event.preventDefault(); setActiveField('other'); setIsInputActive(true) }}
 						href={`${entry.other}`}
 					>
-						{entry.other ? entry.other : 'other/leetcode/codeforces'}
+						{entry.other ? entry.other : 'other'}
 					</a>
 				}
 			</div>

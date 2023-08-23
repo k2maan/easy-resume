@@ -14,6 +14,7 @@ function Document(props) {
       <Header
         color={props.color}
         setDocumentTitle={props.setDocumentTitle}
+        linkOptions={props.linkOptions}
       />
       <Experience />
       <Education />
