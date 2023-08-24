@@ -78,12 +78,18 @@ input[name="name"] {
 .button-add-details,
 .button-remove-details {
 	z-index: 100;
-	border-radius: 25%;
-	border: 1px solid #666;
-	padding: 4px 8px;
+	border-radius: 20%;
+	border: 1px solid #a9a9a9;
+	padding: 4px 9px;
 	background-color: #eee;
 	color: #000;
 	cursor: pointer;
+	font-size: 14px !important;
+}
+
+.button-remove,
+.button-remove-details {
+	padding: 4px 12px;
 }
 
 .button-add:hover,
@@ -91,12 +97,17 @@ input[name="name"] {
 .button-add-details:hover,
 .button-remove-details:hover {
 	z-index: 100;
-	border-radius: 25%;
-	border: 1px solid #666;
-	padding: 4px 8px;
-	background-color: #e1f6fd;
+	border-radius: 20%;
+	border: 1px solid #a9a9a9;
+	padding: 4px 9px;
+	background-color: #e5f3f8;
 	color: #000;
 	cursor: pointer;
+}
+
+.button-remove:hover,
+.button-remove-details:hover {
+	padding: 4px 12px;
 }
 
 .button-add,
