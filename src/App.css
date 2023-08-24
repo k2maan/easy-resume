@@ -1,293 +1,301 @@
 body {
-	background-color: #333;
-	color: black;
-	font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 input,
 textarea,
 select {
-	font-family: inherit;
+  font-family: inherit;
 }
 
 .main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
 }
 
 .container {
-	margin: auto;
-	width: 900px;
-	background-color: #fff;
-	box-sizing: border-box;
-	padding: 16px 24px;
+  margin: auto;
+  width: 900px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 16px 24px;
 }
 
 .document {
-	height: 1100px;
+  height: 1100px;
 }
 
 .customiser {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 8px;
-	width: 780px;
-	padding: 30px;
-	border-radius: 32px;
-	background-color: #444;
-	top: 20px;
-	position: fixed;
-	z-index: 100;
-	overflow: visible
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 780px;
+  padding: 36px;
+  border-radius: 32px;
+  background-color: #444;
+  top: 20px;
+  position: fixed;
+  z-index: 100;
+  overflow: visible
+}
+
+.title {
+  color: #e1e1e1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 22px;
+  position: fixed;
+  z-index: 101;
+  font-size: 10px;
 }
 
 input,
 textarea {
-	border: 0px;
-	border-radius: 8px;
-	padding: 4px;
-	width: 100%;
-	box-sizing: border-box;
+  border: 0px;
+  border-radius: 8px;
+  padding: 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 input:focus,
 textarea:focus {
-	background-color: #eee;
-	outline: none;
+  background-color: #eee;
+  outline: none;
 }
 
 input[name="name"] {
-	text-decoration: none;
-	padding: 16px 4px;
-	font-size: 36px;
-	text-align: center;
-	color: black;
+  text-decoration: none;
+  padding: 16px 4px;
+  font-size: 36px;
+  text-align: center;
+  color: black;
 }
 
 .heading {
-	display: flex;
-	align-items: center;
-	position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .button-add,
 .button-remove,
 .button-add-details,
 .button-remove-details {
-	z-index: 100;
-	border-radius: 20%;
-	border: 1px solid #a9a9a9;
-	padding: 4px 9px;
-	background-color: #eee;
-	color: #000;
-	cursor: pointer;
-	font-size: 14px !important;
+  z-index: 100;
+  border-radius: 20%;
+  border: 1px solid #a9a9a9;
+  padding: 4px 9px;
+  background-color: #eee;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px !important;
 }
 
 .button-remove,
 .button-remove-details {
-	padding: 4px 12px;
+  padding: 4px 12px;
 }
 
 .button-add:hover,
 .button-remove:hover,
 .button-add-details:hover,
 .button-remove-details:hover {
-	z-index: 100;
-	border-radius: 20%;
-	border: 1px solid #a9a9a9;
-	padding: 4px 9px;
-	background-color: #e5f3f8;
-	color: #000;
-	cursor: pointer;
+  z-index: 100;
+  border-radius: 20%;
+  border: 1px solid #a9a9a9;
+  padding: 4px 9px;
+  background-color: #e5f3f8;
+  color: #000;
+  cursor: pointer;
 }
 
 .button-remove:hover,
 .button-remove-details:hover {
-	padding: 4px 12px;
+  padding: 4px 12px;
 }
 
 .button-add,
 .button-remove {
-	margin: 0;
-	position: absolute;
-	left: -36px;
+  margin: 0;
+  position: absolute;
+  left: -36px;
 }
 
 h3 {
-	padding: 0;
-	margin: 0;
-	margin: 10px 0 8px 0;
-	border-bottom: 1.5px solid black;
-	width: 100%;
+  padding: 0;
+  margin: 0;
+  margin: 10px 0 8px 0;
+  border-bottom: 1.5px solid black;
+  width: 100%;
 }
 
 .info {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .info-item {
-	font-size: 13px;
-	padding: 4px 4px;
-	text-decoration: none;
-	text-align: center;
-	width: auto;
+  font-size: 13px;
+  padding: 4px 4px;
+  text-decoration: none;
+  text-align: center;
+  width: auto;
 }
 
 a.info-item {
-	text-decoration: underline;
-	color: #555;
+  text-decoration: underline;
+  color: #555;
 }
 
 select[name="font"] {
-	padding: 4px;
+  padding: 4px;
 }
 
 input[name="position"],
 input[name="project-title"],
 input[name="degree"] {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 .employer-details,
 .education-details,
 .project-details {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 input[name="employer-duration"],
 input[name="education-duration"] {
-	text-align: right;
-	width: 300px;
+  text-align: right;
+  width: 300px;
 }
 
 input[name="project-technologies"],
 input[name="education-place"] {
-	width: 50%;
-	text-align: right;
+  width: 50%;
+  text-align: right;
 }
 
 textarea {
-	resize: none;
-	width: 100%;
+  resize: none;
+  width: 100%;
 }
 
 .education {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 .bullet-point {
-	position: absolute;
-	left: 5px;
-	top: 3px;
+  position: absolute;
+  left: 5px;
+  top: 3px;
 }
 
 .details {
-	position: relative;
-	padding-left: 14px;
+  position: relative;
+  padding-left: 14px;
 }
 
 .details-button {
-	display: flex;
-	align-items: center;
-	position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .button-add-details {
-	font-size: 10px;
-	margin: 0;
-	position: absolute;
-	left: -36px;
+  font-size: 10px;
+  margin: 0;
+  position: absolute;
+  left: -36px;
 }
 
 .button-remove-details {
-	font-size: 10px;
-	margin: 0;
-	position: absolute;
-	left: -16px;
+  font-size: 10px;
+  margin: 0;
+  position: absolute;
+  left: -16px;
 }
 
 /* To remove header and footer text/meta data from the PDF */
 @media print {
-	@page {
-		margin: 0;
-	}
+  @page {
+    margin: 0;
+  }
 }
 
-
-
 .button-colour {
-	display: inline-block;
-	padding: 20px 20px;
-	border-radius: 50%;
-	cursor: pointer;
-	border: 2px;
+  display: inline-block;
+  padding: 20px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px;
 }
 
 .button-colour.black {
-	background-color: #000;
+  background-color: #000;
 }
 
 .button-colour.blue {
-	background-color: #353387;
+  background-color: #353387;
 }
 
 .button-colour.cyan {
-	background-color: #22adb5;
+  background-color: #22adb5;
 }
 
 .button-colour.grey {
-	background-color: #555;
+  background-color: #555;
 }
 
 .button-download {
-	padding: 2px 12px;
-	display: flex;
-	align-items: center;
-	background-color: #fff;
-	color: #222;
-	border-radius: 4px;
-	border: 0px;
-	cursor: pointer;
+  padding: 2px 12px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #222;
+  border-radius: 4px;
+  border: 0px;
+  cursor: pointer;
 }
 
 .arrow {
-	border: solid #222;
-	border-width: 0 4px 4px 0;
-	display: inline-block;
-	padding: 6px;
-	margin: 6px 12px 12px 6px;
+  border: solid #222;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 6px;
+  margin: 6px 12px 12px 6px;
 }
 
 .arrow:hover {
-	border: solid lightskyblue;
-	border-width: 0 4px 4px 0;
-	display: inline-block;
-	padding: 6px;
-	margin: 6px 12px 12px 6px;
+  border: solid lightskyblue;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 6px;
+  margin: 6px 12px 12px 6px;
 }
 
 .right {
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 
 .left {
-	transform: rotate(135deg);
-	-webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 
 .up {
-	transform: rotate(-135deg);
-	-webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }
 
 .down {
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
